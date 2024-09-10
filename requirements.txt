@@ -1,0 +1,10 @@
+numpy<2.0
+opencv-python
+opencv-contrib-python
+Pillow
+shapely
+pyclipper
+six
+onnxruntime
+pywin32==306
+PyQt6

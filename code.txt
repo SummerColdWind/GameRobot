@@ -1,0 +1,15 @@
+handle title_part=赶走鼹鼠
+handle_child cls=Chrome_RenderWidgetHostHWND
+exec boolean=True
+print text=$boolean
+while boolean
+    templ image=target save=center
+    if $center
+        print text=$center
+        mouse_double_click pos=$center
+    else
+        print text="Not found"
+        mouse_move pos=(0,0)
+    end
+    sleep duration=1000
+end

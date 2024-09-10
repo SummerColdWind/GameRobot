@@ -1,0 +1,13 @@
+import sys
+from ui.ui import BotUI
+from PyQt6.QtWidgets import QApplication
+
+import win32gui, win32con, win32ui, win32api
+import PIL
+from PIL import Image
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = BotUI()
+    window.show()
+    sys.exit(app.exec())
