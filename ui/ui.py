@@ -50,6 +50,8 @@ class BotUI(QMainWindow):
     def load_bot_code(self):
         file_dialog = QFileDialog()
         file_path, _ = file_dialog.getOpenFileName(self, "Select File")
+        if not file_path:
+            return
         with open(file_path, 'r', encoding='utf-8') as f:
             self.lines = f.readlines()
         self.update_statements()

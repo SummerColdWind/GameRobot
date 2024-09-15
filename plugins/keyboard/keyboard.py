@@ -33,6 +33,24 @@ def key_press(handle, key, duration=1000):
     win32gui.SendMessage(handle, win32con.WM_KEYUP, vk_code, 0)
 
 @register
+def key_press_exact(handle, key, duration=1000):
+    """ 按住键盘按键，精确计时 """
+    def delay(d):
+        """ 高精度延时 """
+        start = time.perf_counter()
+        while (time.perf_counter() - start) < (d / 1000):
+            pass
+
+    if key in KEY_EVENTS:
+        vk_code = KEY_EVENTS[key]
+    else:
+        vk_code = ord(key.upper())  # 将字母转换为虚拟键码
+
+    win32gui.SendMessage(handle, win32con.WM_KEYDOWN, vk_code, 0)
+    delay(duration)
+    win32gui.SendMessage(handle, win32con.WM_KEYUP, vk_code, 0)
+
+@register
 def key_click(handle, key):
     """ 模拟键盘单击 """
     key_press(handle, key, duration=10)

@@ -90,10 +90,18 @@ end
 
 ## 我该如何知道这些方法的参数是什么？
 
-由于本项目的文档还在建设中，您可以先行查看对应插件的源代码(?)
+本项目的文档还在建设中。内置插件:
+ - base
+ - [window](../plugins/window/window.md)
+ - capture
+ - [mouse](../plugins/mouse/mouse.md)
+ - [keyboard](../plugins/keyboard/keyboard.md)
+ - image
+ - ocr
+ - ddt
 
 ## 没有我想要的功能怎么办？
 
-`GameRobot`只实现了一些基本的功能，并且还在开发当中，您可以通过编写[插件](bot%20syntax.md)来自由地实现更多功能
+`GameRobot`只实现了一些基本的功能，并且还在开发当中，您可以通过编写[插件](bot%20plugin.md)来自由地实现更多功能
 
 

@@ -1,15 +1,11 @@
-handle title_part=赶走鼹鼠
-handle_child cls=Chrome_RenderWidgetHostHWND
-exec boolean=True
-print text=$boolean
-while boolean
-    templ image=target save=center
-    if $center
-        print text=$center
-        mouse_double_click pos=$center
-    else
-        print text="Not found"
-        mouse_move pos=(0,0)
-    end
-    sleep duration=1000
-end
+handle height=625 width=1000
+handle_child cls_part=Chrome_RenderWidgetHostHWND
+mouse_click pos=(100,100) button="middle"
+sleep duration=200
+capture
+ddt.wind save=wind
+ddt.angle save=angle
+print text="风力"
+print text=$wind
+print text="角度"
+print text=$angle
