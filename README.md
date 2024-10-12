@@ -30,6 +30,13 @@
  - GameRobot集成了Paddle的OCR模型，通过一行命令即可调用
  - ...
 
+### GameRobot已实现项目
+<hr>
+
+ - [小猿口算全自动比大小](https://www.bilibili.com/video/BV1rF25YAEwC)
+ - [弹弹堂瞄准器](https://www.bilibili.com/video/BV11q4meTEC8)
+
+
 ## 快速开始
 <hr>
 

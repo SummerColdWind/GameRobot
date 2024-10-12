@@ -62,6 +62,7 @@ def mouse_drag(handle, pos, pos2, button='left', duration=10):
     for i in range(1, int(duration / 10) + 1):
         lparam2 = make_lparam((pos[0] + delta_x * i, pos[1] + delta_y * i))
         win32gui.SendMessage(handle, win32con.WM_MOUSEMOVE, btn_flag, lparam2)
+        win32gui.SendMessage(handle, down_msg, btn_flag, lparam)
     lparam2 = make_lparam(pos2)
     win32gui.SendMessage(handle, win32con.WM_MOUSEMOVE, btn_flag, lparam2)
 

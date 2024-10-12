@@ -5,6 +5,7 @@ Pillow
 shapely
 pyclipper
 six
-onnxruntime
+onnxruntime==1.17.0
 pywin32==306
 PyQt6
+PyYaml

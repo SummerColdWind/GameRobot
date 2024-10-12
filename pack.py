@@ -19,6 +19,7 @@ requirements = [
     'six',
     'onnxruntime',
     'PyQt6',
+    'tkinter'
 ]
 for module in requirements:
     cmd += f' --hidden-import {module}'
